@@ -33,11 +33,11 @@
 
 ## Lab 11
 
-+ Name of feature: 3
++ Name of feature: setup repos, setup db, setup book component
 + Estimate of time needed to complete: 3 hr
-+ Start time: 1:30 PM
-+ Finish time: _____
-+ Actual time needed to complete: _____
++ Start time: 2:00 PM
++ Finish time: 6:00 PM
++ Actual time needed to complete: 4 hours
 
 # Collaborations Agreement
 

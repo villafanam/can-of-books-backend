@@ -38,6 +38,7 @@ async function getBooks (request, response, next)
 {
   try {
     let allBooks = await Book.find({}); // Model.find({}) - gets all the docs from the database
+    // console.log(allBooks);
     response.status(200).send(allBooks);
   } catch (error) {
     console.log(error.message);
