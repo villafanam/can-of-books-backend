@@ -71,6 +71,25 @@ async function postBook(request, response,next)
   }
 }
 
+// **** ENDPOINT TO DELETE A BOOK ******
+// ! we must have a path parameter
+// ! we will use a variable to capture the ID
+// ! to create the variable we use the ':' and add a variable name
+app.delete('/books/:bookID', deleteBook);
+
+async function deleteBook(request,response,next){
+  try {
+    let id = request.params.bookID;
+
+    await Book.findByIdAndDelete(id);
+
+    response.status(200).send('Book Deleted');
+  } catch (error) {
+    console.log(error.message);
+    next(error);
+  }
+}
+
 app.get('*', (request, response) => {
   response.status(404).send('Not availabe');
 });
