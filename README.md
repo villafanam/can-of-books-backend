@@ -29,7 +29,10 @@
 
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
-+ collaborators: Steven Gant
++ collaborators: Steven Gant, Marco Villafana
++ [book shelf image](https://ychef.files.bbci.co.uk/976x549/p03gg1lc.jpg)
++ [stickman image](https://thumb.ac-illust.com/c7/c7451b519c84650c09058605676949a2_t.jpeg)
++ [Cover art for Lego Harry Potter: Years 1–4. from Warner Bros. Interactive Entertainment, or the developers, TT Games. ](https://upload.wikimedia.org/wikipedia/en/9/96/Lego_potter_cover.jpg)
 
 # Collaborations Agreement
 
@@ -84,3 +87,10 @@
 + Finish time: 1800
 + Actual time needed to complete: 4 hr
 
+## Lab 13
+
++ Name of feature: Update a Resource (book in database)
++ Estimate of time needed to complete: 3 hr
++ Start time: 1300
++ Finish time: 1530
++ Actual time needed to complete: 2.5 hr
