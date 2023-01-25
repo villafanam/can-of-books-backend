@@ -90,6 +90,35 @@ async function deleteBook(request,response,next){
   }
 }
 
+//  ***** ENDPOINT TO UPDATE/PUT A BOOK *****
+app.put('/books/:bookID', updatedBook);
+
+async function updatedBook(request, response, next)
+{
+  try {
+    // ! path parameter - id of the cat to update
+    // ! request.body - data to update the cat with
+    // ! { new: true, overwrite: true } - option object for findByIdAndUpdate()
+
+    let id = request.params.bookID;
+    let data = request.body;
+    let options = {new: true, overwrite: true };
+
+    // ! findByIdAndUpdate - 3 args
+    // ! 1st is the id of the thing to update
+    // ! 2nd is the update data
+    // ! 3rd is an option object - { new: true, overwrite: true }
+    const updatedBook = await Book.findByIdAndUpdate(id, data, options);
+
+    response.status(200).send(updatedBook);
+  } 
+  catch (error) 
+  {
+    console.log(error.message);
+    next(error);
+  }
+}
+
 app.get('*', (request, response) => {
   response.status(404).send('Not availabe');
 });
@@ -98,7 +127,6 @@ app.get('*', (request, response) => {
 app.use((error, request, response, next) => {
   response.status(500).send(error.message);
 });
-
 
 
 app.listen(PORT, () => console.log(`listening on ${PORT}`));
