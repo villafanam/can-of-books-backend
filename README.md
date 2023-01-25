@@ -31,14 +31,6 @@
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
 + collaborators: Steven Gant
 
-## Lab 11
-
-+ Name of feature: setup repos, setup db, setup book component
-+ Estimate of time needed to complete: 3 hr
-+ Start time: 2:00 PM
-+ Finish time: 6:00 PM
-+ Actual time needed to complete: 4 hours
-
 # Collaborations Agreement
 
 ## Logistical
@@ -70,7 +62,23 @@
 
 - What will your team do if one person is pulling all the weight while the other person is not contributing?
   + Inform TM first, then get instructor involved if continues
+  
 + What will your team do if one person is taking over the project and not letting the other member contribute?
   + Inform TM first, then get instructor involved if continues
 + How will you approach each other and the challenge of building an application knowing that it is impossible for two people to be at the exact same place in understanding and skill level?
   + Driver - Navigator method. Talk through issues.
+
+## Lab 11
+
++ Name of feature: setup repos, setup db, setup book component
++ Estimate of time needed to complete: 3 hr
++ Start time: 2:00 PM
++ Finish time: 6:00 PM
++ Actual time needed to complete: 4 hours
+
+## Lab 12
+Name of feature: CREATE and DELETE of CRUD
+Estimate of time needed to complete: 3 hours
+Start time: 1400
+Finish time: _____
+Actual time needed to complete: _____

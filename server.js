@@ -23,16 +23,21 @@ db.once('open', function () {
 // *******************************
 
 const app = express();
+
+//middleware
 app.use(cors());
+
+// ! DON'T FORGET TO USE THIS!!! - MIDDLEWARE TO PARSE JSON DATA FROM THE REQUEST.BODY
+app.use(express.json());
 
 const PORT = process.env.PORT || 3002;
 
-app.get('/test', (request, response) => {
+// ENDPOINT
+app.get('/', (request, response) => {
+  response.status(200).send('Welcome!');
+});
 
-  response.send('test request received')
-
-})
-
+// ***** ENDPOINT TO GET ALL THE BOOKS FROM MY DATABASE *****
 app.get('/books', getBooks);
 
 async function getBooks (request, response, next)
@@ -42,6 +47,25 @@ async function getBooks (request, response, next)
     // console.log(allBooks);
     response.status(200).send(allBooks);
   } catch (error) {
+    console.log(error.message);
+    next(error);
+  }
+}
+
+
+// **** ENDPOINT TO ADD A BOOK *****
+app.post('/books', postBook);
+
+async function postBook(request, response,next)
+{
+  try {
+    let createdBook = await Book.create(request.body);
+    // !!! DON'T FORGET THAT MIDDLEWARE ^ ^ ^ ^(line 32)
+
+    response.status(200).send(createdBook);
+  } 
+  catch (error) 
+  {
     console.log(error.message);
     next(error);
   }
